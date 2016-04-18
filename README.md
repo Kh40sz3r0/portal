@@ -1,6 +1,4 @@
-# Y
-
-**Generated from HotTowel Angular**
+# Portal
 
 ## Prerequisites
 
