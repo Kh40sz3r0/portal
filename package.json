@@ -8,6 +8,14 @@
     "start": "node src/server/app.js",
     "test": "gulp test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Kh40sz3r0/portal.git"
+  },
+  "licenses": [{
+    "type": "Apache-2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  }],
   "dependencies": {
     "body-parser": "^1.8.2",
     "express": "^4.9.3",
