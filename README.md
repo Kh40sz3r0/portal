@@ -1,5 +1,7 @@
 # Portal
 
+[![Build Status](https://travis-ci.org/Kh40sz3r0/portal.svg?branch=master)](https://travis-ci.org/Kh40sz3r0/portal)
+
 ## Prerequisites
 
 1. Install [Node.js](http://nodejs.org)
