@@ -3,8 +3,8 @@ node_js:
   - "0.12"
 before_install:
   - npm install -g bower
-  - -x chmod a+x ./setup.sh
+  - chmod a+x ./setup.sh
 after_success:
   - gulp build
-  - -x chmod a+x ./deploy.sh
+  - chmod a+x ./deploy.sh
 
