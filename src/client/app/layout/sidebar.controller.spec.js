@@ -1,4 +1,6 @@
 /* jshint -W117, -W030 */
+'use strict';
+
 describe('layout', function() {
   describe('sidebar', function() {
     var controller;

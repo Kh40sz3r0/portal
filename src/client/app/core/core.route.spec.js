@@ -1,4 +1,6 @@
 /* jshint -W117, -W030 */
+'use strict';
+
 describe('core', function() {
   describe('state', function() {
     var views = {

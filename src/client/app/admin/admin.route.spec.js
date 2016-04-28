@@ -1,4 +1,6 @@
 /* jshint -W117, -W030 */
+'use strict';
+
 describe('admin routes', function() {
   describe('state', function() {
     var view = 'app/admin/admin.html';

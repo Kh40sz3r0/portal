@@ -1,4 +1,6 @@
 /* jshint -W117, -W030 */
+'use strict';
+
 describe('AdminController', function() {
   var controller;
 

@@ -1,4 +1,6 @@
 /* jshint -W117, -W030 */
+'use strict';
+
 describe('DashboardController', function() {
   var controller;
   var people = mockData.getMockPeople();

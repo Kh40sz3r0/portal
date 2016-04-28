@@ -1,4 +1,6 @@
 /* jshint -W079 */
+'use strict';
+
 var mockData = (function() {
   return {
     getMockPeople: getMockPeople,

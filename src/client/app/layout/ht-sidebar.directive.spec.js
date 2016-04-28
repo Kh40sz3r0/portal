@@ -1,5 +1,7 @@
 /* jshint -W117, -W030 */
 /* jshint multistr:true */
+'use strict';
+
 describe('htSidebar directive: ', function() {
   var dropdownElement;
   var el;

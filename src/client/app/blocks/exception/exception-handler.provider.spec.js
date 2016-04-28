@@ -1,4 +1,6 @@
 /* jshint -W117, -W030 */
+'use strict';
+
 describe('blocks.exception', function() {
   var exceptionHandlerProvider;
   var mocks = {

@@ -1,4 +1,6 @@
 /* jshint -W117, -W030 */
+'use strict';
+
 describe('dashboard routes', function() {
   describe('state', function() {
     var view = 'app/dashboard/dashboard.html';

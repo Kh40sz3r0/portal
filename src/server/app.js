@@ -27,7 +27,7 @@ switch (environment) {
     console.log('** BUILD **');
     app.use(express.static('./build/'));
     // Any invalid calls for templateUrls are under app/* and should return 404
-    app.use('/app/*', function(req, res, next) {
+    app.use('/app/*', function(req, res) {
       four0four.send404(req, res);
     });
     // Any deep link calls should return index.html
@@ -39,7 +39,7 @@ switch (environment) {
     app.use(express.static('./'));
     app.use(express.static('./tmp'));
     // Any invalid calls for templateUrls are under app/* and should return 404
-    app.use('/app/*', function(req, res, next) {
+    app.use('/app/*', function(req, res) {
       four0four.send404(req, res);
     });
     // Any deep link calls should return index.html
