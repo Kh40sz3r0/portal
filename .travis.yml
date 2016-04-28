@@ -3,8 +3,8 @@ node_js:
   - "0.12"
 before_install:
   - npm install -g bower
-  - chmod a+x ./setup.sh
+  - npm install -g firebase-tools
 after_success:
   - gulp build
-  - chmod a+x ./deploy.sh
+  - firebase deploy --token "$FIREBASE_TOKEN"
 
