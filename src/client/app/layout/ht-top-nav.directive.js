@@ -1,9 +1,9 @@
+'use strict';
 (function () {
-  'use strict';
 
   angular
-      .module('app.layout')
-      .directive('htTopNav', htTopNav);
+    .module('app.layout')
+    .directive('htTopNav', htTopNav);
 
   /* @ngInject */
   function htTopNav() {
@@ -19,15 +19,13 @@
     };
 
     /* @ngInject */
-    function TopNavController(logger,$rootScope) {
+    function TopNavController(logger, $rootScope) {
+      /*jshint validthis:true */
       var vm = this;
-
-
-      vm.amIlogged = false;
-      vm.amISigningUp = false;
-      vm.signupMessage = 'Sign up';
-      vm.optionsMessage = 'Options';
-      vm.logoutMessage = 'Logout';
+      vm.projects = 'Proyectos';
+      vm.services = 'Servicios';
+      vm.clients = 'Clientes';
+      vm.contacts = 'Contacto';
       vm.options = [
         {
           name: 'Account',

@@ -1,19 +1,34 @@
 <nav class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-header">
-    <a href="/" class="navbar-brand"><span class="brand-title">{{vm.navline.title}}</span></a>
-    <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </a>
-  </div>
-  <div class="navbar-collapse collapse">
-    <div class="pull-right navbar-logo">
-      <ul class="nav navbar-nav pull-right">
-        <li class="a">
-          <a>{{vm.greeting}}</a>
-        </li>
-      </ul>
+    <div class="navbar-header">
+        <a href="/" class="navbar-brand"><span class="brand-title">{{vm.navline.title}}</span></a>
+        <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
     </div>
-  </div>
+    <div class="navbar-collapse collapse">
+        <div class="pull-right navbar-logo">
+            <ul class="nav navbar-nav pull-right">
+                <li class="a">
+                    <a>{{vm.services}}</a>
+                </li>
+                <li class="a">
+                    <a>{{vm.projects}}</a>
+                </li>
+                <li class="a">
+                    <a>{{vm.clients}}</a>
+                </li>
+                <li class="a">
+                    <a>{{vm.contacts}}</a>
+                </li>
+                <li class="a">
+                    <a></a>
+                </li>
+                <li class="a">
+                    <a>{{vm.greeting}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
