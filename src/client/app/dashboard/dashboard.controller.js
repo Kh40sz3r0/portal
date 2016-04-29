@@ -5,9 +5,9 @@
     .module('app.dashboard')
     .controller('DashboardController', DashboardController);
 
-  DashboardController.$inject = ['$q', 'dataservice', 'logger'];
+  DashboardController.$inject = ['$q', 'logger'];
   /* @ngInject */
-  function DashboardController($q, dataservice, logger) {
+  function DashboardController($q, logger) {
     var vm = this;
     vm.news = {
       title: 'Portal',
@@ -20,23 +20,9 @@
     activate();
 
     function activate() {
-      var promises = [getMessageCount(), getPeople()];
+      var promises = [];
       return $q.all(promises).then(function() {
         logger.info('Activated Dashboard View');
-      });
-    }
-
-    function getMessageCount() {
-      return dataservice.getMessageCount().then(function(data) {
-        vm.messageCount = data;
-        return vm.messageCount;
-      });
-    }
-
-    function getPeople() {
-      return dataservice.getPeople().then(function(data) {
-        vm.people = data;
-        return vm.people;
       });
     }
   }

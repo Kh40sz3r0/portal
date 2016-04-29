@@ -5,7 +5,7 @@
   <style>
     /* This helps the ng-show/ng-hide animations start at the right place. */
     /* Since Angular has this but needs to load, this gives us the class early. */
-    
+
     .ng-hide {
       display: none!important;
     }
@@ -33,19 +33,14 @@
 </head>
 
 <body>
-  <div>
-    <div ng-include="'app/layout/shell.html'"></div>
-    <div id="splash-page" ng-show="showSplash">
-      <div class="page-splash">
-        <div class="page-splash-message">
-          Sergio Marcial Software Solutions
-        </div>
-        <div class="progress progress-striped active page-progress-bar">
-          <div class="bar"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!--[if lt IE 9]>
+<p>You are using an <strong>outdated</strong> browser.</p>
+<![endif]-->
+<div ng-include="'app/layout/shell.html'"></div>
+
+<div ui-view class="container"></div>
+
+<footer-nav></footer-nav>
 
   <!-- build:js js/lib.js -->
   <!-- bower:js -->
@@ -86,6 +81,7 @@
   <script src="/src/client/app/core/dataservice.js"></script>
   <script src="/src/client/app/dashboard/dashboard.controller.js"></script>
   <script src="/src/client/app/dashboard/dashboard.route.js"></script>
+  <script src="/src/client/app/layout/footer-nav.directive.js"></script>
   <script src="/src/client/app/layout/ht-sidebar.directive.js"></script>
   <script src="/src/client/app/layout/ht-top-nav.directive.js"></script>
   <script src="/src/client/app/layout/shell.controller.js"></script>
