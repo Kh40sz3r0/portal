@@ -74,6 +74,19 @@ gulp.task('styles', ['clean-styles'], function() {
 });
 
 /**
+ * Add translations
+ * @return {Stream}
+ */
+gulp.task('internationalize', function() {
+  log('Adding translations...');
+
+  return gulp
+    .src(config.translations)
+    .pipe($.plumber()) // exit gracefully if something fails after this
+    .pipe(gulp.dest(config.translation));
+});
+
+/**
  * Copy fonts
  * @return {Stream}
  */
@@ -83,6 +96,18 @@ gulp.task('fonts', ['clean-fonts'], function() {
   return gulp
     .src(config.fonts)
     .pipe(gulp.dest(config.build + 'fonts'));
+});
+
+/**
+ * Copy translations
+ * @return {Stream}
+ */
+gulp.task('translations', function() {
+  log('Copying translations');
+
+  return gulp
+    .src(config.translations)
+    .pipe(gulp.dest(config.build + 'translations'));
 });
 
 /**
@@ -141,7 +166,7 @@ gulp.task('wiredep', function() {
     .pipe(gulp.dest(config.client));
 });
 
-gulp.task('inject', ['wiredep', 'styles', 'templatecache'], function() {
+gulp.task('inject', ['wiredep', 'styles', 'templatecache', 'internationalize'], function() {
   log('Wire up css into the html, after files are ready');
 
   return gulp
@@ -193,7 +218,7 @@ gulp.task('build-specs', ['templatecache'], function(done) {
  * This is separate so we can run tests on
  * optimize before handling image or fonts
  */
-gulp.task('build', ['optimize', 'images', 'fonts'], function() {
+gulp.task('build', ['optimize', 'images', 'fonts', 'translations'], function() {
   log('Building everything');
 
   var msg = {
@@ -495,10 +520,13 @@ function startBrowserSync(isDev, specRunner) {
   // If build: watches the files, builds, and restarts browser-sync.
   // If dev: watches less, compiles it to css, browser-sync handles reload
   if (isDev) {
-    gulp.watch([config.less], ['styles'])
+    log('it is dev');
+    log('less ' + config.less);
+    log('translations ' + config.translations);
+    gulp.watch([config.less, config.translations], ['styles', 'internationalize'])
       .on('change', changeEvent);
   } else {
-    gulp.watch([config.less, config.js, config.html], ['browserSyncReload'])
+    gulp.watch([config.less, config.js, config.html, config.translations], ['browserSyncReload'])
       .on('change', changeEvent);
   }
 
@@ -510,7 +538,7 @@ function startBrowserSync(isDev, specRunner) {
       '!' + config.less,
       config.temp + '**/*.css'
     ] : [],
-    ghostMode: { // these are the defaults t,f,t,t
+    ghostMode: {
       clicks: true,
       location: false,
       forms: true,

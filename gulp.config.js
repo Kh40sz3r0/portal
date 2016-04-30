@@ -8,6 +8,7 @@ module.exports = function() {
   var root = './';
   var specRunnerFile = 'specs.html';
   var temp = './.tmp/';
+  var translation = './translations/';
   var wiredep = require('wiredep');
   var bowerFiles = wiredep({ devDependencies: true })['js'];
   var bower = {
@@ -34,14 +35,15 @@ module.exports = function() {
     htmltemplates: clientApp + '**/*.html',
     images: client + 'images/**/*.*',
     index: client + 'index.html',
+    translations: client + 'translation/*.json',
     // app js, with no specs
     js: [
-      clientApp + '**/*.module.js',
+      clientApp + '**/app.module.js',
       clientApp + '**/*.js',
       '!' + clientApp + '**/*.spec.js'
     ],
     jsOrder: [
-      '**/app.module.js',
+      '**/app.*.js',
       '**/*.module.js',
       '**/*.js'
     ],
@@ -55,7 +57,7 @@ module.exports = function() {
       client + 'stubs/**/*.js'
     ],
     temp: temp,
-
+    translation: translation,
     /**
      * optimized files
      */

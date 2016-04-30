@@ -28,7 +28,13 @@
     "toastr": "^2.1.2",
     "angular-animate": "^1.5.3",
     "angular-bootstrap": "^1.2.5",
-    "firebase": "~2.4.2"
+    "firebase": "~2.4.2",
+    "angular-translate": "~2.11.0",
+    "angular-translate-loader-static-files": "^2.11.0",
+    "angular-translate-storage-local": "^2.11.0",
+    "angular-translate-handler-log": "^2.11.0",
+    "angular-dynamic-locale": "^0.1.32",
+    "angular-i18n": "^1.5.5"
   },
   "resolutions": {
     "angular": "1.5.3"
