@@ -24,7 +24,7 @@
       var vm = this;
 
       $translate('created-by').then(function (translation) {
-        vm.text = translation+'Sergio Marcial';
+        vm.text = translation + 'Sergio Marcial';
       });
 
       $translate('powered-by').then(function (translation) {
