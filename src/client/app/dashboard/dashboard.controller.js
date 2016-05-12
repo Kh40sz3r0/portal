@@ -13,8 +13,6 @@
       title: 'Portal',
       description: 'Portal .'
     };
-    vm.messageCount = 0;
-    vm.people = [];
     vm.title = 'Dashboard';
 
     activate();

@@ -11,18 +11,16 @@
         <div class="pull-right navbar-logo">
             <ul class="nav navbar-nav pull-right">
                 <li class="a">
-                    <a>{{vm.services}}</a>
-                    <!--{{"layout.ht-top.services" | translate}}-->
+                    <a>{{"layout.ht-top.services" | translate}}</a>
                 </li>
                 <li class="a">
-                    <a>{{vm.projects}}</a>
-                    <!--{{"layout.ht-top.projects" | translate}}-->
+                    <a>{{"layout.ht-top.projects" | translate}}</a>
                 </li>
                 <li class="a">
-                    <a>{{vm.clients}}</a>
+                    <a>{{"layout.ht-top.clients" | translate}}</a>
                 </li>
                 <li class="a">
-                    <a>{{vm.contacts}}</a>
+                    <a ng-click="vm.contact()">{{"layout.ht-top.contact" | translate}}</a>
                 </li>
                 <li class="a">
                     <a>{{vm.greeting}}</a>

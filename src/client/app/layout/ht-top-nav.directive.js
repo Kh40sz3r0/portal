@@ -19,7 +19,7 @@
     };
 
     /* @ngInject */
-    function TopNavController(logger, $rootScope) {
+    function TopNavController(logger, $rootScope, $state, translationsFactory) {
       /*jshint validthis:true */
       var vm = this;
       vm.projects = 'Proyectos';
@@ -32,6 +32,7 @@
           value: 'account'
         }
       ];
+      vm.contact = contact;
 
       createGreeting();
 
@@ -46,6 +47,11 @@
         } else if (hour >= 19 && hour <= 23) {
           vm.greeting = 'Good Night! ';
         }
+      }
+
+      function contact() {
+        console.log('go state contact');
+        $state.go('contact');
       }
     }
 
