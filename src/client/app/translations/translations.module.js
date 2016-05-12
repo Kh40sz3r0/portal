@@ -22,6 +22,12 @@
         'layout.ht-top.services': 'Services',
         'layout.ht-top.clients': 'Clients',
         'layout.ht-top.contact': 'Contact',
+        'greeting-late-night': 'Should you not be sleep? ',
+        'greeting-morning': 'Good Morning! ',
+        'greeting-afternoon': 'Good Afternoon! ',
+        'greeting-night': 'Good Night! ',
+        'created-by':'Created by: ',
+        'powered-by':'Powered by: ',
         'directives.language-select.Language': 'Language'
       }
     );
@@ -30,6 +36,12 @@
         'layout.ht-top.services': 'Servicios',
         'layout.ht-top.clients': 'Clientes',
         'layout.ht-top.contact': 'Contacto',
+        'greeting-late-night': 'No deberias estar dormido? ',
+        'greeting-morning': 'Buenos días! ',
+        'greeting-afternoon': 'Buenas tardes! ',
+        'greeting-night': 'Buenas noches!',
+        'created-by':'Creado por: ',
+        'powered-by':'Desarrollado con: ',
         'directives.language-select.Language': 'Idioma'
       }
     );

@@ -19,7 +19,7 @@
     };
 
     /* @ngInject */
-    function TopNavController(logger, $rootScope, $state, translationsFactory) {
+    function TopNavController(logger, $rootScope, $state, $translate) {
       /*jshint validthis:true */
       var vm = this;
       vm.projects = 'Proyectos';
@@ -33,20 +33,25 @@
         }
       ];
       vm.contact = contact;
+      var translationTag;
+
+      var hour = new Date().getHours();
+      if (hour >= 0 && hour <= 6) {
+        translationTag = 'greeting-late-night';
+      } else if (hour >= 6 && hour <= 12) {
+        translationTag = 'greeting-morning';
+      } else if (hour >= 12 && hour <= 19) {
+        translationTag = 'greeting-afternoon';
+      } else if (hour >= 19 && hour <= 23) {
+        translationTag = 'greeting-night';
+      }
 
       createGreeting();
 
       function createGreeting() {
-        var hour = new Date().getHours();
-        if (hour >= 0 && hour <= 6) {
-          vm.greeting = 'Should you not be sleep? ';
-        } else if (hour >= 6 && hour <= 12) {
-          vm.greeting = 'Good Morning! ';
-        } else if (hour >= 12 && hour <= 19) {
-          vm.greeting = 'Good Afternoon! ';
-        } else if (hour >= 19 && hour <= 23) {
-          vm.greeting = 'Good Night! ';
-        }
+        $translate(translationTag).then(function (translation) {
+          vm.greeting = translation;
+        });
       }
 
       function contact() {
