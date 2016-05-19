@@ -14,10 +14,9 @@
     vm.title = 'Contact';
     vm.sendEmail = sendEmail;
 
-    function sendEmail(){
+    function sendEmail() {
       contactFactory.sendEmail();
     }
-
 
     console.log('contact controller');
   }

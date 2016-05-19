@@ -12,9 +12,7 @@ router.get('/*', four0four.notFoundMiddleware);
 
 module.exports = router;
 
-//////////////
-
-function sendEmail(req, res, next){
+function sendEmail(req, res, next) {
   // setup e-mail data with unicode symbols
   var mailOptions = {
     from: '" Test" <sergio.marcial@sergiomarcial.com>', // sender address

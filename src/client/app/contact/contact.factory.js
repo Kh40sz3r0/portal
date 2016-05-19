@@ -8,14 +8,14 @@
     .factory('contactFactory', ['$http', '$q', 'exception', 'logger', contactFactory]);
 
   /* @ngInject */
-  function contactFactory($http, logger) {
+  function contactFactory($http, logger, exception) {
     var service = {
       sendEmail: sendEmail
     };
 
     return service;
 
-    function sendEmail(){
+    function sendEmail() {
       return $http.post('/api/send-email')
         .then(success)
         .catch(fail);
