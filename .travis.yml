@@ -6,6 +6,5 @@ before_install:
   - npm install -g firebase-tools
 after_success:
   - gulp build
-  - firebase use develop
-  - firebase deploy --token "$FIREBASE_TOKEN"
+  - firebase deploy --project brilliant-inferno-2901 --token "$FIREBASE_TOKEN"
 

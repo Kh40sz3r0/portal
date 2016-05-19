@@ -1,5 +1,6 @@
 {
   "projects": {
-    "develop": "portal-1313"
+    "develop": "brilliant-inferno-2901",
+    "default": "brilliant-inferno-2901"
   }
 }
