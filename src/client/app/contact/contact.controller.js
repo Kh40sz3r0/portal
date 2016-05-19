@@ -6,12 +6,18 @@
 
   angular
     .module('app.contact')
-    .controller('ContactController', ['logger', ContactController]);
+    .controller('ContactController', ['logger', 'contactFactory', ContactController]);
 
   /* @ngInject */
-  function ContactController(logger) {
+  function ContactController(logger, contactFactory) {
     var vm = this;
     vm.title = 'Contact';
+    vm.sendEmail = sendEmail;
+
+    function sendEmail(){
+      contactFactory.sendEmail();
+    }
+
 
     console.log('contact controller');
   }
