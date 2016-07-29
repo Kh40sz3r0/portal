@@ -52,7 +52,7 @@
         'dashboard.blog-entry': 'Registros del blog: ',
         'dashboard.github-repos': 'Repositorios de Github: ',
         'dashboard.github-repos.name': 'Nombre: ',
-        'dashboard.github-repos.description': 'Descripci&#243;n: ',
+      'dashboard.github-repos.description': 'Descripción: ',
         'dashboard.github-repos.created-at': 'Creado en: ',
         'dashboard.github-repos.ssh': 'SSH: ',
         'dashboard.github-repos.url': 'URL: ',
