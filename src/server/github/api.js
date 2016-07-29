@@ -16,13 +16,13 @@ function getRepos(req, res, next) {
     // optional
     debug: true,
     protocol: "https",
-    host: "api.github.com", // should be api.github.com for GitHub
-    pathPrefix: "", // for some GHEs; none for GitHub
+    host: "api.github.com",
+    pathPrefix: "",
     headers: {
-      "user-agent": "sergiomarcial-portal" // GitHub is happy with a unique user agent
+      "user-agent": "sergiomarcial-portal"
     },
     Promise: require('bluebird'),
-    followRedirects: false, // default: true; there's currently an issue with non-get redirects, so allow ability to disable follow-redirects
+    followRedirects: false,
     timeout: 5000
   });
 
