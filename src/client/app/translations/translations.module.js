@@ -26,8 +26,16 @@
         'greeting-morning': 'Good Morning! ',
         'greeting-afternoon': 'Good Afternoon! ',
         'greeting-night': 'Good Night! ',
-        'created-by':'Created by: ',
-        'powered-by':'Powered by: ',
+        'created-by': 'Created by: ',
+        'powered-by': 'Powered by: ',
+        'dashboard.blog-entry': 'Blog\'s entry: ',
+        'dashboard.github-repos': 'Github Repositories: ',
+        'dashboard.github-repos.name': 'Name: ',
+        'dashboard.github-repos.description': 'Description: ',
+        'dashboard.github-repos.created-at': 'Created at: ',
+        'dashboard.github-repos.ssh': 'SSH: ',
+        'dashboard.github-repos.url': 'URL: ',
+        'dashboard.github-repos.last-push': 'Last push: ',
         'directives.language-select.Language': 'Language'
       }
     );
@@ -40,8 +48,16 @@
         'greeting-morning': 'Buenos días! ',
         'greeting-afternoon': 'Buenas tardes! ',
         'greeting-night': 'Buenas noches!',
-        'created-by':'Creado por: ',
-        'powered-by':'Desarrollado con: ',
+        'created-by': 'Creado por: ',
+        'dashboard.blog-entry': 'Registros del blog: ',
+        'dashboard.github-repos': 'Repositorios de Github: ',
+        'dashboard.github-repos.name': 'Nombre: ',
+        'dashboard.github-repos.description': 'Descripci&#243;n: ',
+        'dashboard.github-repos.created-at': 'Creado en: ',
+        'dashboard.github-repos.ssh': 'SSH: ',
+        'dashboard.github-repos.url': 'URL: ',
+        'dashboard.github-repos.last-push': 'Ultimo push: ',
+        'powered-by': 'Desarrollado con: ',
         'directives.language-select.Language': 'Idioma'
       }
     );

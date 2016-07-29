@@ -19,7 +19,7 @@
     };
 
     /* @ngInject */
-    function TopNavController(logger, $rootScope, $state, $translate) {
+    function TopNavController(logger, $state, $translate, $scope) {
       /*jshint validthis:true */
       var vm = this;
       vm.projects = 'Proyectos';
@@ -33,6 +33,9 @@
         }
       ];
       vm.contact = contact;
+      vm.clients = clients;
+      vm.services = services;
+      vm.projects = projects;
       var translationTag;
 
       var hour = new Date().getHours();
@@ -57,6 +60,21 @@
       function contact() {
         console.log('go state contact');
         $state.go('contact');
+      }
+
+      function clients() {
+        console.log('go state clients');
+        $state.go('clients');
+      }
+
+      function services() {
+        console.log('go state services');
+        $state.go('services');
+      }
+
+      function projects() {
+        console.log('go state projects');
+        $state.go('projects');
       }
     }
 

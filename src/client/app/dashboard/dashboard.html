@@ -1,19 +1,44 @@
 <section id="dashboard-view" class="mainbar">
-  <section class="matter">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{"dashboard.github-repos" | translate}}</label>
+                    <table class="widget">
+                        <tr>
+                            <th>{{"dashboard.github-repos.name" | translate}}</th>
+                            <th>{{"dashboard.github-repos.description" | translate}}</th>
+                            <th>{{"dashboard.github-repos.created-at" | translate}}</th>
+                            <th>{{"dashboard.github-repos.ssh" | translate}}</th>
+                            <th>{{"dashboard.github-repos.url" | translate}}</th>
+                            <th>{{"dashboard.github-repos.last-push" | translate}}</th>
+                        </tr>
+                        <tr ng-repeat="repo in vm.repos">
+                            <td><a href="{{repo.svn_url}}" target="_blank">{{repo.name}}</a></td>
+                            <td>{{repo.description}}</td>
+                            <td>{{repo.created_at | date:'short'}}</td>
+                            <td>{{repo.ssh_url}}</td>
+                            <td>{{repo.svn_url}}</td>
+                            <td>{{repo.pushed_at | date:'short'}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>{{"dashboard.blog-entry" | translate}}</label>
+                    <ul>
+                        <li ng-repeat="post in vm.posts">
+                            <a href="{{post.URL}}" target="_blank" tooltip="hola">{{post.title}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-
-        </div>
-        <div class="col-md-6">
-
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 </section>

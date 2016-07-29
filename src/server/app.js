@@ -8,8 +8,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var port = process.env.PORT || 8001;
 var four0four = require('./utils/404')();
+var jwt = require('jsonwebtoken');
 
 var environment = process.env.NODE_ENV;
+console.log('environment ' + environment);
 
 app.use(favicon(__dirname + '/favicon.ico'));
 app.use(bodyParser.urlencoded({ extended: true }));

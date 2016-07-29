@@ -11,14 +11,17 @@
     <div class="navbar-collapse collapse">
         <div class="pull-right navbar-logo">
             <ul class="nav navbar-nav pull-right">
+                <li class="a">
+                    <div ng-translate-language-select></div>
+                </li>
                 <li>
                     <a ng-href="{{vm.link}}" target="_blank">
-                        {{vm.text}}
+                        {{"created-by" | translate}}Sergio Marcial
                     </a>
                 </li>
                 <li class="dropdown dropdown-big">
                     <a href="http://www.angularjs.org" target="_blank">
-                        {{vm.poweredBy}} <img src="images/AngularJS-small.png"/>
+                        {{"powered-by" | translate}} <img src="images/AngularJS-small.png"/>
                     </a>
                 </li>
             </ul>

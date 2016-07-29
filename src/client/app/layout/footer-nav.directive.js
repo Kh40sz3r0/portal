@@ -19,18 +19,9 @@
     };
 
     /* @ngInject */
-    function footerNavController(config, $translate) {
+    function footerNavController(config) {
       /*jshint validthis:true */
       var vm = this;
-
-      $translate('created-by').then(function (translation) {
-        vm.text = translation + 'Sergio Marcial';
-      });
-
-      $translate('powered-by').then(function (translation) {
-        vm.poweredBy = translation;
-      });
-
       vm.title = config.appTitle;
       vm.link = 'https://twitter.com/Kh40s_z3r0';
     }

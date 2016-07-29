@@ -1,29 +1,45 @@
 'use strict';
 
 var router = require('express').Router();
+// sign with default (HMAC SHA256)
+var jwt = require('jsonwebtoken');
+var fs = require('fs');
+
 var four0four = require('./utils/404')();
+var config = require('./utils/config');
 var data = require('./data');
-var mailConfig = require('./mail/config');
+var wordpress = require('./wordpress/api');
+var github = require('./github/api');
+var authentication = require('./authentication/api');
+
+router.get('/getToken', authentication.getToken);
+
+router.use(function(req, res, next) {
+  var token = req.body.token || req.query.token || req.headers['x-access-token'];
+  if (token) {
+    jwt.verify(token, config.secret, function(err, decoded) {
+      if (err) {
+        return res.json({ success: false, message: 'Failed to authenticate token.' });
+      } else {
+        req.decoded = decoded;
+        next();
+      }
+    });
+  } else {
+    return res.status(403).send({
+      success: false,
+      message: 'No token provided.'
+    });
+  }
+});
 
 router.get('/people', getPeople);
 router.get('/person/:id', getPerson);
-router.post('/send-email', sendEmail);
+router.get('/github/repos', github.getRepos);
+router.get('/wordpress/posts', wordpress.getPosts);
 router.get('/*', four0four.notFoundMiddleware);
 
 module.exports = router;
-
-function sendEmail(req, res, next) {
-  // setup e-mail data with unicode symbols
-  var mailOptions = {
-    from: '" Test" <sergio.marcial@sergiomarcial.com>', // sender address
-    to: 'sergiommarcial@gmail.com', // list of receivers
-    subject: 'Hello ', // Subject line
-    text: 'Hello world ', // plaintext body
-    html: '<b>Hello world </b>' // html body
-  };
-
-  mailConfig.sendEmail(mailOptions);
-}
 
 function getPeople(req, res, next) {
   res.status(200).send(data.people);
@@ -31,7 +47,7 @@ function getPeople(req, res, next) {
 
 function getPerson(req, res, next) {
   var id = +req.params.id;
-  var person = data.people.filter(function(p) {
+  var person = data.people.filter(function (p) {
     return p.id === id;
   })[0];
 

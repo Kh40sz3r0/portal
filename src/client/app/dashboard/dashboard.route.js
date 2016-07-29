@@ -21,10 +21,6 @@
           controller: 'DashboardController',
           controllerAs: 'vm',
           title: 'dashboard',
-          settings: {
-            nav: 1,
-            content: '<i class="fa fa-dashboard"></i> Dashboard'
-          }
         }
       }
     ];

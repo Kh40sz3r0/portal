@@ -1,11 +1,14 @@
 /**
+ * Created by sergiomarcial on 6/26/16.
+ */
+/**
  * Created by sergiomarcial on 4/30/16.
  */
 (function() {
   'use strict';
 
   angular
-    .module('app.contact')
+    .module('app.clients')
     .run(appRun);
 
   appRun.$inject = ['routerHelper'];
@@ -15,16 +18,16 @@
   }
 
   function getStates() {
-    console.log('state contact');
+    console.log('state clients');
     return [
       {
-        state: 'contact',
+        state: 'clients',
         config: {
-          url: '/contact?code',
-          templateUrl: 'app/contact/contact.html',
-          controller: 'ContactController',
-          controllerAs: 'ContactControllerVm',
-          title: 'Contact'
+          url: '/clients',
+          templateUrl: 'app/clients/clients.html',
+          controller: 'ClientsController',
+          controllerAs: 'ClientsControllerVm',
+          title: 'Clients'
         }
       }
     ];

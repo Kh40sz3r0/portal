@@ -73,10 +73,14 @@
   <script src="/src/client/app/blocks/exception/exception.module.js"></script>
   <script src="/src/client/app/blocks/logger/logger.module.js"></script>
   <script src="/src/client/app/blocks/router/router.module.js"></script>
+  <script src="/src/client/app/clients/clients.module.js"></script>
   <script src="/src/client/app/contact/contact.module.js"></script>
   <script src="/src/client/app/core/core.module.js"></script>
   <script src="/src/client/app/dashboard/dashboard.module.js"></script>
   <script src="/src/client/app/layout/layout.module.js"></script>
+  <script src="/src/client/app/projects/projects.module.js"></script>
+  <script src="/src/client/app/security/security.module.js"></script>
+  <script src="/src/client/app/services/services.module.js"></script>
   <script src="/src/client/app/translations/translations.module.js"></script>
   <script src="/src/client/app/widgets/widgets.module.js"></script>
   <script src="/src/client/app/admin/admin.controller.js"></script>
@@ -85,20 +89,28 @@
   <script src="/src/client/app/blocks/exception/exception.js"></script>
   <script src="/src/client/app/blocks/logger/logger.js"></script>
   <script src="/src/client/app/blocks/router/router-helper.provider.js"></script>
+  <script src="/src/client/app/clients/clients.controller.js"></script>
+  <script src="/src/client/app/clients/clients.route.js"></script>
   <script src="/src/client/app/contact/contact.controller.js"></script>
-  <script src="/src/client/app/contact/contact.factory.js"></script>
   <script src="/src/client/app/contact/contact.route.js"></script>
   <script src="/src/client/app/core/config.js"></script>
   <script src="/src/client/app/core/constants.js"></script>
   <script src="/src/client/app/core/core.route.js"></script>
   <script src="/src/client/app/core/dataservice.js"></script>
   <script src="/src/client/app/dashboard/dashboard.controller.js"></script>
+  <script src="/src/client/app/dashboard/dashboard.factory.js"></script>
   <script src="/src/client/app/dashboard/dashboard.route.js"></script>
   <script src="/src/client/app/layout/footer-nav.directive.js"></script>
   <script src="/src/client/app/layout/ht-sidebar.directive.js"></script>
   <script src="/src/client/app/layout/ht-top-nav.directive.js"></script>
   <script src="/src/client/app/layout/shell.controller.js"></script>
   <script src="/src/client/app/layout/sidebar.controller.js"></script>
+  <script src="/src/client/app/projects/projects.controller.js"></script>
+  <script src="/src/client/app/projects/projects.router.js"></script>
+  <script src="/src/client/app/security/security.factory.js"></script>
+  <script src="/src/client/app/services/services.controller.js"></script>
+  <script src="/src/client/app/services/services.router.js"></script>
+  <script src="/src/client/app/translations/translations.directive.js"></script>
   <script src="/src/client/app/translations/translations.factory.js"></script>
   <script src="/src/client/app/widgets/ht-img-person.directive.js"></script>
   <script src="/src/client/app/widgets/ht-widget-header.directive.js"></script>
@@ -108,17 +120,19 @@
   <!-- endinject -->
   <!-- endbuild -->
 
+
 <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyDxx0Orhs4ch8H6scarXbJW32GDHhdTf_4",
-    authDomain: "portal-1313.firebaseapp.com",
-    databaseURL: "https://portal-1313.firebaseio.com",
-    storageBucket: "portal-1313.appspot.com",
+    apiKey: "AIzaSyBsTnkaQlefKiVGJpeoajoxjAt6GtH63PY",
+    authDomain: "brilliant-inferno-2901.firebaseapp.com",
+    databaseURL: "https://brilliant-inferno-2901.firebaseio.com",
+    storageBucket: "brilliant-inferno-2901.appspot.com",
   };
   firebase.initializeApp(config);
 </script>
+
 
 </body>
 

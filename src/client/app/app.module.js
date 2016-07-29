@@ -8,6 +8,10 @@
     'app.dashboard',
     'app.layout',
     'app.contact',
+    'app.clients',
+    'app.projects',
+    'app.services',
+    'app.security',
     'app.translations'
   ]);
 

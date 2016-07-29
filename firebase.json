@@ -1,15 +1,13 @@
 {
-  "firebase": "brilliant-inferno-2901",
-  "public": "build",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ],
   "database": {
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "build"
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
 }
