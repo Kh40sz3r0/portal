@@ -16,7 +16,7 @@
 
     return service;
 
-    function getGithubRepos(token){
+    function getGithubRepos(token) {
       var config = {headers: {'x-access-token': token}};
       return $http.get('http://localhost:3000/api/github/repos', config)
         .then(getReposSuccess)
@@ -34,7 +34,7 @@
       return response;
     }
 
-    function getReposFailure(err){
+    function getReposFailure(err) {
       return err;
     }
 

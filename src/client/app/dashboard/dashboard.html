@@ -1,47 +1,66 @@
 <section id="dashboard-view" class="mainbar">
     <section class="matter">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="widget wblue">
+                            <div ht-widget-header title="{{'dashboard.github-repos' | translate}}"
+                                 allow-collapse="true"></div>
+                            <div class="widget-content text-center text-info">
 
+                                <table class="table table-condensed table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>{{"dashboard.github-repos.name" | translate}}</th>
+                                        <th>{{"dashboard.github-repos.created-at" | translate}}</th>
+                                        <th>{{"dashboard.github-repos.ssh" | translate}}</th>
+                                        <th>{{"dashboard.github-repos.last-push" | translate}}</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="repo in vm.repos">
+                                        <td><a href="{{repo.svn_url}}" target="_blank">{{repo.name}}</a></td>
+                                        <td>{{repo.created_at | date:'shortDate'}}</td>
+                                        <td>{{repo.ssh_url}}</td>
+                                        <td>{{repo.pushed_at | date:'shortDate'}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="today-datas">
+                                <li class="bblue">
+                                    <span class="bold">{{"dashboard.blog-entry" | translate}}</span>
+                                </li>
+                                <li class="blightblue" ng-repeat="post in vm.posts">
+                                    <div class="pull-left"><i class="fa fa-envelope"></i></div>
+                                    <div class="datas-text pull-right">
+                                        <a href="{{post.URL}}" target="_blank">
+                                            <span class="bold">{{post.title}}</span>
+                                        </a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <label>{{"dashboard.github-repos" | translate}}</label>
-                    <table class="table table-condensed table-striped">
-                        <thead>
-                        <tr>
-                            <th>{{"dashboard.github-repos.name" | translate}}</th>
-                            <th>{{"dashboard.github-repos.description" | translate}}</th>
-                            <th>{{"dashboard.github-repos.created-at" | translate}}</th>
-                            <th>{{"dashboard.github-repos.ssh" | translate}}</th>
-                            <th>{{"dashboard.github-repos.url" | translate}}</th>
-                            <th>{{"dashboard.github-repos.last-push" | translate}}</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr ng-repeat="repo in vm.repos">
-                            <td><a href="{{repo.svn_url}}" target="_blank">{{repo.name}}</a></td>
-                            <td>{{repo.description}}</td>
-                            <td>{{repo.created_at | date:'shortDate'}}</td>
-                            <td>{{repo.ssh_url}}</td>
-                            <td>{{repo.svn_url}}</td>
-                            <td>{{repo.pushed_at | date:'shortDate'}}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <label>{{"dashboard.blog-entry" | translate}}</label>
-                    <ul>
-                        <li ng-repeat="post in vm.posts">
-                            <a href="{{post.URL}}" target="_blank" tooltip="hola">{{post.title}}</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="col-md-3">
+                <a class="twitter-timeline" href="https://twitter.com/Kh40s_z3r0"
+                   width="300" height="300" data-chrome="nofooter noborders">
+                    Tweets by Kh40s_z3r0
+                </a>
+                <a href="https://twitter.com/Kh40s_z3r0" class="twitter-follow-button" data-show-count="false">
+                    Follow @Kh40s_z3r0
+                </a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
     </section>

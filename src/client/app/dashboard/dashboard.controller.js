@@ -34,7 +34,7 @@
     }
 
     function getReposSuccess(response) {
-      vm.repos = response.data
+      vm.repos = response.data;
     }
 
     function getReposFailure(err) {
