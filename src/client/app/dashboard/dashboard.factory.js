@@ -8,11 +8,13 @@
     .factory('dashboardFactory', dashboardFactory);
 
   /* @ngInject */
-  function dashboardFactory($http) {
+  function dashboardFactory($http, ENV_VAR) {
     var service = {
       getWordpressPosts: getWordpressPosts,
       getGithubRepos: getGithubRepos
     };
+
+    var env = ENV_VAR.ENV.toLowerCase();
 
     return service;
 

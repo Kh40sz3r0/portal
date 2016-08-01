@@ -12,15 +12,11 @@
     "type": "git",
     "url": "git@github.com:Kh40sz3r0/portal.git"
   },
-  "licenses": [
-    {
-      "type": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }
-  ],
+  "license": "Apache-2.0",
   "dependencies": {
     "bluebird": "^3.4.1",
     "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
     "express": "^4.9.3",
     "express-jwt": "^3.4.0",
     "firebase": "^2.4.2",

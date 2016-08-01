@@ -498,10 +498,6 @@ function getNodeOptions(isDev) {
   return {
     script: config.nodeServer,
     delayTime: 1,
-    env: {
-      'PORT': port,
-      'NODE_ENV': isDev ? 'dev' : 'build'
-    },
     watch: [config.server]
   };
 }
@@ -609,7 +605,7 @@ function startTests(singleRun, done) {
   if (args.startServers) {
     log('Starting servers');
     var savedEnv = process.env;
-    savedEnv.NODE_ENV = 'dev';
+    savedEnv.NODE_ENV = process.env.NODE_ENV;
     savedEnv.PORT = 8888;
     child = fork(config.nodeServer);
   } else {

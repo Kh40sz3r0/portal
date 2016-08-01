@@ -12,6 +12,7 @@
     'app.projects',
     'app.services',
     'app.security',
+    'app.env',
     'app.translations'
   ]);
 
