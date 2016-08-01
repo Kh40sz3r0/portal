@@ -53,12 +53,12 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <a class="twitter-timeline" href="https://twitter.com/Kh40s_z3r0"
+                <a class="twitter-timeline" href="{{vm.twitterUrl}}"
                    width="300" height="300" data-chrome="nofooter noborders">
-                    Tweets by Kh40s_z3r0
+                    {{"dashboard.twitter.tweetsby" | translate}} {{vm.followUser}}
                 </a>
-                <a href="https://twitter.com/Kh40s_z3r0" class="twitter-follow-button" data-show-count="false">
-                    Follow @Kh40s_z3r0
+                <a href="{{vm.twitterUrl}}" class="twitter-follow-button" data-show-count="false">
+                    {{"dashboard.twitter.follow" | translate}} {{vm.followUser}}
                 </a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>

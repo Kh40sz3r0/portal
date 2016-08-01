@@ -3,17 +3,20 @@
 
   angular
     .module('app.dashboard')
-    .controller('DashboardController', ['$q', 'logger', 'securityFactory',
+    .controller('DashboardController', ['$q', '$sce', 'logger', 'securityFactory',
       'dashboardFactory', DashboardController]);
 
   /* @ngInject */
-  function DashboardController($q, logger, securityFactory, dashboardFactory) {
+  function DashboardController($q, $sce, logger, securityFactory, dashboardFactory) {
     var vm = this;
     vm.news = {
       title: 'Portal',
       description: 'Portal .'
     };
+
     vm.title = 'Dashboard';
+    vm.twitterUrl = 'https://twitter.com/Kh40s_z3r0';
+    vm.followUser = $sce.trustAsHtml('@Kh40s_z3r0');
 
     activate();
 

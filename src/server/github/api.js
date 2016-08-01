@@ -5,7 +5,7 @@
 
 var request = require('request');
 var GitHubApi = require('github');
-var config = require('../utils/config');
+var config = require('../config');
 
 module.exports = {
   getRepos: getRepos
@@ -15,11 +15,11 @@ function getRepos(req, res, next) {
   var github = new GitHubApi({
     // optional
     debug: true,
-    protocol: 'https',
-    host: 'api.github.com',
+    protocol: config.gitProtocol,
+    host: config.gitHost,
     pathPrefix: '',
     headers: {
-      'user-agent': 'sergiomarcial-portal'
+      'user-agent': config.gitUserAgent
     },
     Promise: require('bluebird'),
     followRedirects: false,
@@ -27,7 +27,7 @@ function getRepos(req, res, next) {
   });
 
   github.repos.getForOrg({
-    org: 'sergiomarcial'
+    org: config.gitOrg
   }, function(err, response) {
     res.status(200).send(response);
   });

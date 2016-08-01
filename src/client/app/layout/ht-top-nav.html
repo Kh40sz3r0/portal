@@ -23,7 +23,7 @@
                     <a ng-click="vm.contact()">{{"layout.ht-top.contact" | translate}}</a>
                 </li>
                 <li class="a">
-                    <a>{{vm.greeting}}</a>
+                    <a ng-bind-html="vm.trustAsHtml(vm.greeting)">{{vm.greeting}}</a>
                 </li>
             </ul>
         </div>

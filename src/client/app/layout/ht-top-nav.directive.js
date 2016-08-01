@@ -19,9 +19,11 @@
     };
 
     /* @ngInject */
-    function TopNavController(logger, $state, $translate, $scope) {
+    function TopNavController(logger, $state, $translate, $sce, $scope) {
       /*jshint validthis:true */
       var vm = this;
+
+      vm.trustAsHtml = $sce.trustAsHtml;
       vm.projects = 'Proyectos';
       vm.services = 'Servicios';
       vm.clients = 'Clientes';
