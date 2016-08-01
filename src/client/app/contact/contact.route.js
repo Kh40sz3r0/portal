@@ -20,7 +20,7 @@
       {
         state: 'contact',
         config: {
-          url: '/contact?code',
+          url: '/contact',
           templateUrl: 'app/contact/contact.html',
           controller: 'ContactController',
           controllerAs: 'ContactControllerVm',

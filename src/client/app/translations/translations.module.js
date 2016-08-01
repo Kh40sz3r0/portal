@@ -36,6 +36,10 @@
         'dashboard.github-repos.ssh': 'SSH: ',
         'dashboard.github-repos.url': 'URL: ',
         'dashboard.github-repos.last-push': 'Last push: ',
+      'contact.name': 'Name: ',
+      'contact.role': 'Role: ',
+      'contact.number': 'Number: ',
+      'contact.email': 'Email: ',
         'directives.language-select.Language': 'Language'
       }
     );
@@ -58,6 +62,10 @@
         'dashboard.github-repos.url': 'URL: ',
         'dashboard.github-repos.last-push': 'Ultimo push: ',
         'powered-by': 'Desarrollado con: ',
+      'contact.name': 'Nombre: ',
+      'contact.role': 'Puesto: ',
+      'contact.number': 'Telefono: ',
+      'contact.email': 'Email: ',
         'directives.language-select.Language': 'Idioma'
       }
     );
