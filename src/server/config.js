@@ -32,7 +32,7 @@ if (!configPath) {
   }
 } else {
   config = require(configPath);
-  console.log('Loaded configuration file ' + configPath)
+  console.log('Loaded configuration file ' + configPath);
 }
 
 config.env = env.toLowerCase();

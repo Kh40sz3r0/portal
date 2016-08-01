@@ -8,7 +8,7 @@
     .factory('dashboardFactory', dashboardFactory);
 
   /* @ngInject */
-  function dashboardFactory($http, ENV_VAR) {
+  function dashboardFactory($http, ENV_VAR, APP_CONFIG) {
     var service = {
       getWordpressPosts: getWordpressPosts,
       getGithubRepos: getGithubRepos
@@ -16,18 +16,25 @@
 
     var env = ENV_VAR.ENV.toLowerCase();
 
+    var server;
+    if (env === 'local') {
+      server = APP_CONFIG.server.local + APP_CONFIG.api.local;
+    } else {
+      server = APP_CONFIG.server.prod + APP_CONFIG.api.prod;
+    }
+
     return service;
 
     function getGithubRepos(token) {
       var config = {headers: {'x-access-token': token}};
-      return $http.get('http://localhost:3000/api/github/repos', config)
+      return $http.get(server + '/github/repos', config)
         .then(getReposSuccess)
         .catch(getReposFailure);
     }
 
     function getWordpressPosts(token) {
       var config = {headers: {'x-access-token': token}};
-      return $http.get('http://localhost:3000/api/wordpress/posts', config)
+      return $http.get(server + '/wordpress/posts', config)
         .then(getPostSuccess)
         .catch(getPostFailure);
     }

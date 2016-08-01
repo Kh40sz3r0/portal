@@ -47,6 +47,7 @@ module.exports = function() {
       '**/app/projects/*.js',
       '**/app/services/*.js',
       '**/app/security/*.js',
+      '**/app/config/*.js',
       '**/app/translations/*.js',
       '**/dashboard/**/*.js',
       '**/widgets/*.js',

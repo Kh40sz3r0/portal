@@ -31,7 +31,6 @@ app.get('/constant', function (req, res) {
   res.status(200).send(responseString);
 });
 
-
 console.log('About to crank up node');
 console.log('PORT=' + port);
 console.log('NODE_ENV=' + environment);
