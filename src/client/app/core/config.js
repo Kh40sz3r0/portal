@@ -14,7 +14,7 @@
 
   var config = {
     appErrorPrefix: '[Y Error] ',
-    appTitle: 'Sergio Marcial Software Solutions'
+    appTitle: 'Sergio Marcial'
   };
 
   core.value('config', config);
