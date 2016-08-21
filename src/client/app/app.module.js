@@ -13,7 +13,6 @@
     'app.services',
     'app.security',
     'app.config',
-    'app.env',
     'app.translations'
   ]);
 
