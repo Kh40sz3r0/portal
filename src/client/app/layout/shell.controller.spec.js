@@ -1,4 +1,5 @@
-/* jshint -W117, -W030 */
+/*
+/!* jshint -W117, -W030 *!/
 'use strict';
 
 describe('ShellController', function() {
@@ -34,3 +35,4 @@ describe('ShellController', function() {
     });
   });
 });
+*/

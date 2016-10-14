@@ -1,5 +1,6 @@
-/* jshint -W117, -W030 */
-/* jshint multistr:true */
+/*
+/!* jshint -W117, -W030 *!/
+/!* jshint multistr:true *!/
 'use strict';
 
 describe('htSidebar directive: ', function() {
@@ -146,3 +147,4 @@ describe('htSidebar directive: ', function() {
       'innerElement display value is ' + display);
   }
 });
+*/

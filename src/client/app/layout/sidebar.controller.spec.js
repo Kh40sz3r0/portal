@@ -1,4 +1,5 @@
 /* jshint -W117, -W030 */
+/*
 'use strict';
 
 describe('layout', function() {
@@ -39,3 +40,4 @@ describe('layout', function() {
     });
   });
 });
+*/

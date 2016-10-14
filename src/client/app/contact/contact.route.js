@@ -15,7 +15,6 @@
   }
 
   function getStates() {
-    console.log('state contact');
     return [
       {
         state: 'contact',
