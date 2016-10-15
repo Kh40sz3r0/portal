@@ -1,14 +1,16 @@
 language: node_js
 node_js:
-- '0.12'
+  - '0.12'
 before_install:
-- openssl aes-256-cbc -K $encrypted_eecc6a0700f0_key -iv $encrypted_eecc6a0700f0_iv
-  -in portal-6f2c4231e7cf.json.enc -out portal-6f2c4231e7cf.json -d
-- npm install -g bower
-- npm install -g npm
+  - openssl aes-256-cbc -K $encrypted_eecc6a0700f0_key -iv $encrypted_eecc6a0700f0_iv -in portal-6f2c4231e7cf.json.enc -out portal-6f2c4231e7cf.json -d
+  - gcloud auth activate-service-account --key-file portal-6f2c4231e7cf.json
+  - npm install -g bower
+  - npm install -g npm
 install:
-- npm install --ignore-scripts
-- bower install
+
+  - npm install --ignore-scripts
+  - bower install
+  - gcloud config set project portal-143703
 
 deploy:
   provider: gae
