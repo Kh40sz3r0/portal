@@ -38,7 +38,8 @@
     "angular-cache": "^4.6.0"
   },
   "resolutions": {
-    "angular": "1.5.3"
+    "angular": "1.5.3",
+    "angular-translate": "2.11.1"
   },
   "overrides": {
     "bootstrap": {
