@@ -9,7 +9,6 @@ install:
   - bower install
 
 before_script:
-  - npm run lint
   - if [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
       export IS_PUSH_TO_MASTER=true;
     fi
