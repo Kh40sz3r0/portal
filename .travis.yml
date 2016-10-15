@@ -9,10 +9,9 @@ install:
   - bower install
 before_script:
   - openssl aes-256-cbc -K $encrypted_eecc6a0700f0_key -iv $encrypted_eecc6a0700f0_iv -in portal-b8ed1374e8de.json.enc -out portal-b8ed1374e8de.json -d
-  - export GCLOUD_KEY="$(pwd)/portal-b8ed1374e8de.json";
 deploy:
   provider: gae
   skip_cleanup: true
-  keyfile: ${GCLOUD_KEY}
+  keyfile: portal-b8ed1374e8de.json
   project: portal-143703
 sudo: false
