@@ -13,6 +13,6 @@ before_script:
 deploy:
   provider: gae
   skip_cleanup: true
-  keyfile: "${GCLOUD_KEY}"
+  keyfile: ${GCLOUD_KEY}
   project: portal-143703
 sudo: false
