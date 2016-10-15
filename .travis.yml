@@ -7,18 +7,12 @@ before_install:
 install:
   - npm install --ignore-scripts
   - bower install
-
 before_script:
-  - if [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
-      export IS_PUSH_TO_MASTER=true;
-    fi
-  - if [ $IS_PUSH_TO_MASTER ]; then
-      - openssl aes-256-cbc -K $encrypted_eecc6a0700f0_key -iv $encrypted_eecc6a0700f0_iv -in portal-b8ed1374e8de.json.enc -out portal-b8ed1374e8de.json -d
-      export GCLOUD_KEY="$(pwd)/portal-b8ed1374e8de.json";
-    fi
-sudo: false
+  - openssl aes-256-cbc -K $encrypted_eecc6a0700f0_key -iv $encrypted_eecc6a0700f0_iv -in portal-b8ed1374e8de.json.enc -out portal-b8ed1374e8de.json -d
+  - export GCLOUD_KEY="$(pwd)/portal-b8ed1374e8de.json";
 deploy:
   provider: gae
   skip_cleanup: true
   keyfile: "${GCLOUD_KEY}"
   project: portal-143703
+sudo: false
