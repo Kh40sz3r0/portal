@@ -23,10 +23,12 @@ install:
   - bower install
   - gcloud config set project portal-143703
 
-deploy:
-  provider: gae
-  skip_cleanup: true
-  keyfile: portal-6f2c4231e7cf.json
-  project: portal-143703
+after_success:
+  - gcloud app deploy -q
+#deploy:
+#  provider: gae
+#  skip_cleanup: true
+#  keyfile: portal-6f2c4231e7cf.json
+#  project: portal-143703
 
 sudo: true
