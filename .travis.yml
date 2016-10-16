@@ -14,10 +14,16 @@ before_install:
   - gcloud projects list
   - npm install -g bower
   - npm install -g npm
+  - npm install -g gulp
 install:
   - npm install --ignore-scripts
   - bower install
+script:
+  - gulp test
+  - gulp bump
+  - export PACKAGE_VERSION=$(node -e "console.log(require('./package.json').version);")
 after_success:
+  - echo $PACKAGE_VERSION
   - gcloud config set project portal-143703
-  - gcloud app deploy -q
+  - gcloud app deploy -q --version=$PACKAGE_VERSION
 sudo: true

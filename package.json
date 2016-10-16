@@ -1,7 +1,7 @@
 {
   "name": "PortalSM",
   "description": "Y Project Generated from HotTowel Angular",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "scripts": {
     "start": "node src/server/app.js",
     "monitor": "nodemon src/server/app.js",
