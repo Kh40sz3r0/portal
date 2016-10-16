@@ -21,6 +21,7 @@ install:
   - bower install
 script:
   #- gulp test
+  - gulp build
   - gulp bump
 after_success:
   - echo $PACKAGE_VERSION
