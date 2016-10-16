@@ -15,6 +15,7 @@ before_install:
   - npm install -g bower
   - npm install -g npm
   - npm install -g gulp
+  - npm install -g phantomjs
 install:
   - npm install --ignore-scripts
   - bower install
