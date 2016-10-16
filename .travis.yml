@@ -19,5 +19,5 @@ install:
   - bower install
 after_success:
   - gcloud config set project portal-143703
-  - gcloud app deploy --log-http -q
+  - gcloud app deploy -q
 sudo: true
