@@ -1,13 +1,24 @@
 language: node_js
+
+cache:
+  directories:
+  - "$HOME/google-cloud-sdk/"
+
 node_js:
   - '0.12'
+
 before_install:
+
+  - export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+  - echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee /etc/apt/sources.list.d/google-cloud-sdk.list
+  - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+  - sudo apt-get update && sudo apt-get install google-cloud-sdk
   - openssl aes-256-cbc -K $encrypted_eecc6a0700f0_key -iv $encrypted_eecc6a0700f0_iv -in portal-6f2c4231e7cf.json.enc -out portal-6f2c4231e7cf.json -d
   - gcloud auth activate-service-account --key-file portal-6f2c4231e7cf.json
   - npm install -g bower
   - npm install -g npm
-install:
 
+install:
   - npm install --ignore-scripts
   - bower install
   - gcloud config set project portal-143703
@@ -17,4 +28,5 @@ deploy:
   skip_cleanup: true
   keyfile: portal-6f2c4231e7cf.json
   project: portal-143703
-sudo: false
+
+sudo: true
