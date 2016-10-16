@@ -20,7 +20,7 @@ install:
   - npm install --ignore-scripts
   - bower install
 script:
-  - gulp test
+  #- gulp test
   - gulp bump
   - export PACKAGE_VERSION=$(node -e "console.log(require('./package.json').version);")
 after_success:
