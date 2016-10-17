@@ -20,11 +20,10 @@ install:
   - npm install
   - bower install
 script:
-  - gulp build
+  - gulp test
   - gulp styles
   - gulp bump
 after_success:
-  - echo $PACKAGE_VERSION
   - gcloud config set project portal-143703
   - gcloud app deploy -q
 sudo: true

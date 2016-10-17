@@ -37,8 +37,19 @@
 <!--[if lt IE 9]>
 <p>You are using an <strong>outdated</strong> browser.</p>
 <![endif]-->
-<div ng-include="'app/layout/shell.html'"></div>
-
+<div>
+    <div ng-include="'app/layout/shell.html'"></div>
+    <div id="splash-page" ng-show="showSplash">
+        <div class="page-splash">
+            <div class="page-splash-message">
+                test
+            </div>
+            <div class="progress progress-striped active page-progress-bar">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div ui-view class="container"></div>
 

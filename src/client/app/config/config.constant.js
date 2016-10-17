@@ -5,7 +5,7 @@
 
   angular.module('app.config').constant('APP_CONFIG', {
     server: {
-      local: 'http://localhost:3000/',
+      local: 'http://localhost:3002/',
       prod: 'http://www.sergiomarcial.com/'
     },
     api: {
