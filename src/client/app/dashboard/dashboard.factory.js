@@ -18,9 +18,9 @@
 
     var server;
     if (env === 'local') {
-      server = APP_CONFIG.server.local + APP_CONFIG.api.local;
+      server = APP_CONFIG.server.local + APP_CONFIG.api.local + APP_CONFIG.version.local;
     } else {
-      server = APP_CONFIG.server.prod + APP_CONFIG.api.prod;
+      server = APP_CONFIG.server.prod + APP_CONFIG.api.prod + APP_CONFIG.version.prod;
     }
 
     return service;
