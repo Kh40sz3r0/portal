@@ -3,7 +3,7 @@ cache:
   directories:
   - "$HOME/google-cloud-sdk/"
 node_js:
-  - '0.12'
+  - 'node'
 before_install:
   - openssl aes-256-cbc -K $encrypted_eecc6a0700f0_key -iv $encrypted_eecc6a0700f0_iv -in portal-b8ed1374e8de.json.enc -out portal-b8ed1374e8de.json -d
   - export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"

@@ -19,7 +19,7 @@
     if (env === 'local') {
       server = APP_CONFIG.server.local + APP_CONFIG.api.local + APP_CONFIG.version.local;
     } else {
-      server = APP_CONFIG.server.prod + APP_CONFIG.api.prod+ APP_CONFIG.version.local;
+      server = APP_CONFIG.server.prod + APP_CONFIG.api.prod + APP_CONFIG.version.local;
     }
 
     return service;
@@ -28,7 +28,7 @@
 
       return $http({
         url: server + '/get-token',
-        method: "GET",
+        method:'GET',
         withCredentials: true,
         headers: {
           'Content-Type': 'application/json; charset=utf-8'
