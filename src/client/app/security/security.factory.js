@@ -25,7 +25,6 @@
     return service;
 
     function getToken() {
-
       return $http({
         url: server + '/get-token',
         method:'GET',
