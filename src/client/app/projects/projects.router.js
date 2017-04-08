@@ -15,7 +15,6 @@
   }
 
   function getStates() {
-    console.log('state projects');
     return [
       {
         state: 'projects',

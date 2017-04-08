@@ -5,8 +5,8 @@
 
   angular.module('app.config').constant('APP_CONFIG', {
     server: {
-      local: 'http://localhost:3000/',
-      prod: 'https://brilliant-inferno-2901.firebaseapp.com/'
+      local: 'http://localhost:3002/',
+      prod: 'http://www.sergiomarcial.com/'
     },
     api: {
       local: 'api',

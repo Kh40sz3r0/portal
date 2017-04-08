@@ -1,5 +1,5 @@
 /* jshint -W117, -W030 */
-'use strict';
+/*'use strict';
 
 describe('dashboard routes', function() {
   describe('state', function() {
@@ -8,9 +8,6 @@ describe('dashboard routes', function() {
     beforeEach(function() {
       module('app.dashboard', bard.fakeToastr);
       bard.inject('$httpBackend', '$location', '$rootScope', '$state', '$templateCache');
-    });
-
-    beforeEach(function() {
       $templateCache.put(view, '');
     });
 
@@ -31,3 +28,4 @@ describe('dashboard routes', function() {
     });
   });
 });
+*/

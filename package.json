@@ -1,12 +1,11 @@
 {
   "name": "PortalSM",
   "description": "Y Project Generated from HotTowel Angular",
-  "version": "0.0.0",
+  "version": "1.0.3",
   "scripts": {
-    "init": "npm install",
-    "install": "bower install",
     "start": "node src/server/app.js",
-    "test": "gulp test"
+    "monitor": "nodemon src/server/app.js",
+    "deploy": "gcloud app deploy"
   },
   "repository": {
     "type": "git",
@@ -14,19 +13,22 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "bluebird": "^3.4.1",
+    "angular": "^1.5.8",
+    "angular-cache": "^4.6.0",
+    "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
     "dotenv": "^2.0.0",
     "express": "^4.9.3",
     "express-jwt": "^3.4.0",
-    "firebase": "^2.4.2",
-    "firebase-tools": "^2.2.1",
     "github": "^2.1.0",
+    "hystrixjs": "0.0.3",
+    "jsonwebtoken": "^7.1.9",
     "morgan": "^1.1.1",
     "nodemailer": "^2.4.1",
     "open": "0.0.5",
     "request": "^2.72.0",
-    "serve-favicon": "^2.0.1"
+    "serve-favicon": "^2.0.1",
+    "throttling": "^1.0.2"
   },
   "devDependencies": {
     "browser-sync": "~2.11.2",
@@ -91,5 +93,8 @@
     "sinon-chai": "^2.6.0",
     "wiredep": "^2.2.2",
     "yargs": "^3.15.0"
+  },
+  "engines": {
+    "node": "0.12"
   }
 }

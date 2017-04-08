@@ -18,7 +18,6 @@
   }
 
   function getStates() {
-    console.log('state services');
     return [
       {
         state: 'services',

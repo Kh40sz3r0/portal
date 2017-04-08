@@ -13,9 +13,8 @@
     'app.services',
     'app.security',
     'app.config',
-    'app.translations'
-  ]).constant('ENV_VAR', {
-    ENV:'prod'
-  });
+    'app.translations',
+    'app.env'
+  ]);
 
 })();

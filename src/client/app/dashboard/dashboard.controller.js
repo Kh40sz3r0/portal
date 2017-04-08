@@ -41,7 +41,6 @@
     }
 
     function getReposFailure(err) {
-      console.log(err);
       vm.repos = {};
     }
 
@@ -50,7 +49,6 @@
     }
 
     function getPostFailure(err) {
-      console.log(err);
       vm.posts = {};
     }
   }

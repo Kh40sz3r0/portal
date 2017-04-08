@@ -18,7 +18,6 @@
   }
 
   function getStates() {
-    console.log('state clients');
     return [
       {
         state: 'clients',

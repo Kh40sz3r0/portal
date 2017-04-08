@@ -12,6 +12,6 @@ module.exports = {
   'secret': 'ilovescotchyscotch',
   'wordPressApiUrl': 'https://public-api.wordpress.com/rest/v1.1/sites/',
   'wordPressBlog': 'kh40sz3r0.com',
-  'wordPressPosts': '/posts/'
-
+  'wordPressPosts': '/posts/',
+  'server': 'http://localhost:3002/'
 };
