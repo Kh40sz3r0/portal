@@ -4,5 +4,5 @@
 'use strict';
 
 module.exports = {
-
+  'server': 'http://www.sergiomarcial.com'
 };
